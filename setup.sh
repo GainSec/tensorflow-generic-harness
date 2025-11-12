@@ -3,8 +3,8 @@ set -euo pipefail
 
 VENV_DIR=".venv"
 PYTHON_BIN="${PYTHON_BIN:-/opt/homebrew/bin/python3.11}"
-REQ_LINUX="SCRIPTS/requirements-llm.txt"
-REQ_OSX="SCRIPTS/requirements-llm-osx.txt"
+REQ_LINUX="requirements-llm.txt"
+REQ_OSX="requirements-llm-osx.txt"
 
 if [ ! -x "$PYTHON_BIN" ]; then
   echo "Python binary $PYTHON_BIN not found or not executable." >&2
