@@ -8,6 +8,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 COPY scripts/requirements-llm.txt /tmp/requirements.txt
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
-COPY scripts/run_tflite_detector.py /app/run_tflite_detector.py
+COPY scripts/generic_tflite_harness.py /app/generic_tflite_harness.py
 COPY assets/models/objects /app/assets/models/objects
-ENTRYPOINT ["python", "/app/run_tflite_detector.py"]
+ENTRYPOINT ["python", "generic_tflite_harness.py"]
